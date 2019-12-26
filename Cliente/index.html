@@ -152,6 +152,11 @@
         
         //crea la tabla y mapa con los datos que se le pasan;
         function MapTable(data){
+            
+            //linea de desarrollo; eliminar en produción;
+            data = [{"code":"es","value":9.24,"comentarios":"voto","nom_pais":"Espa\u00f1a"},{"code":"fr","value":3.42,"comentarios":"votofr","nom_pais":"Francia"}];
+            data = JSON.stringify(data);
+            
             data = JSON.parse(data);
             tabla(data);
             map(data);
@@ -212,6 +217,11 @@
         
         //inserta la lista de paises seleccionables en los elementos select
         function options_paises(data){
+            
+            {//linea de desarrollo - eliminar en produccion;
+            data = [{"acronimo":"al","nom_pais":"Albania"},{"acronimo":"de","nom_pais":"Alemania"},{"acronimo":"ad","nom_pais":"Andorra"},{"acronimo":"am","nom_pais":"Armenia"},{"acronimo":"at","nom_pais":"Austria"},{"acronimo":"az","nom_pais":"Azerbaiy\u00c3\u00a1n"},{"acronimo":"by","nom_pais":"Belarus"},{"acronimo":"be","nom_pais":"B\u00c3\u00a9lgica"},{"acronimo":"ba","nom_pais":"Bosnia y Herzegovina"},{"acronimo":"bg","nom_pais":"Bulgaria"},{"acronimo":"cz","nom_pais":"Chequia"},{"acronimo":"cy","nom_pais":"Chipre"},{"acronimo":"hr","nom_pais":"Croacia"},{"acronimo":"dk","nom_pais":"Dinamarca"},{"acronimo":"sk","nom_pais":"Eslovaquia"},{"acronimo":"si","nom_pais":"Eslovenia"},{"acronimo":"es","nom_pais":"Espa\u00c3\u00b1a"},{"acronimo":"va","nom_pais":"Estado Vaticano"},{"acronimo":"ee","nom_pais":"Estonia"},{"acronimo":"fi","nom_pais":"Finlandia"},{"acronimo":"fr","nom_pais":"Francia"},{"acronimo":"ge","nom_pais":"Georgia"},{"acronimo":"gr","nom_pais":"Grecia"},{"acronimo":"nl","nom_pais":"Holanda"},{"acronimo":"hu","nom_pais":"Hungr\u00c3\u00ada"},{"acronimo":"ie","nom_pais":"Irlanda"},{"acronimo":"is","nom_pais":"Islandia"},{"acronimo":"it","nom_pais":"Italia"},{"acronimo":"kz","nom_pais":"Kazajst\u00c3\u00a1n"},{"acronimo":"lv","nom_pais":"Letonia"},{"acronimo":"li","nom_pais":"Liechtenstein"},{"acronimo":"lt","nom_pais":"Lituania"},{"acronimo":"lu","nom_pais":"Luxemburgo"},{"acronimo":"mk","nom_pais":"Macedonia"},{"acronimo":"mt","nom_pais":"Malta"},{"acronimo":"md","nom_pais":"Moldavia"},{"acronimo":"mc","nom_pais":"M\u00c3\u00b3naco"},{"acronimo":"no","nom_pais":"Noruega"},{"acronimo":"pl","nom_pais":"Polonia"},{"acronimo":"pt","nom_pais":"Portugal"},{"acronimo":"gb","nom_pais":"Reino Unido"},{"acronimo":"ro","nom_pais":"Ruman\u00c3\u00ada"},{"acronimo":"ru","nom_pais":"Rusia"},{"acronimo":"sm","nom_pais":"San Marino"},{"acronimo":"se","nom_pais":"Suecia"},{"acronimo":"ch","nom_pais":"Suiza"},{"acronimo":"ua","nom_pais":"Ucrania"}];
+            data = JSON.stringify(data);}
+
             paises = JSON.parse(data);
             function query_paises(){
                 var msg_paises='<option value="'+Math.random()+'" selected disabled hidden>Seleccione un país</option>';
@@ -303,6 +313,10 @@
            }
         }
         function pais_residencia(data){
+            //linea de desarrollo. Eliminar en produccion;
+            data = {"country":"Espa\u00f1a","country_code":"es"};
+            data = JSON.stringify(data);
+            
             if(data=='error'){
                 document.getElementsByName('pais')[0].disabled=false;
             }else{
