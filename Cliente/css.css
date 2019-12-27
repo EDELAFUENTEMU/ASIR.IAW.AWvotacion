@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700');
+
+@font-face {
+          font-family: Metria;
+          src: url("Metria.ttf");
+}
+
+#c1{
+/*   background:linear-gradient(45deg, rgba(254,143,6,1) 6%, rgba(255,0,224,1) 99%);*/
+    background-color: #222;
+}
+.fill {
+        min-height: 100vh;
+}
+h1{
+        font-family: Metria;
+        font-size: 8em;
+        color: #d2a553;
+         animation: title 2s linear infinite;
+}
+h1:before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #222;
+    border-radius: 100%;
+    transition: all 500ms cubic-bezier(1, 0.885, 0.32, 1);
+    transform: scale(3);
+    left: calc(50% - 250px);
+    top: calc(50% - 250px);
+}
+
+#autores{
+    display: flex;
+    justify-content:center;
+    text-align: center
+}
+#autores li {
+  font-family: 'Arial';
+  list-style-type: none;
+  overflow: hidden;
+  font-size: 1em;
+  color: #fff;
+  animation: autores 5s linear forwards;
+  
+  margin: 2px;
+}
+
+@keyframes autores {
+  from {width: 0vw; opacity: 0}
+  50%{opacity: 0.75;}
+  to {width: 10vw; opacity: 1}
+}
+@keyframes title{
+    from {text-shadow:4px 2px 18px rgba(255, 255, 255, 0.75); }
+    50%{text-shadow:4px 2px 12px rgba(255, 255, 255, 0.75);}
+    to{text-shadow:4px 2px 18px rgba(255, 255, 255, 0.75);}
+}

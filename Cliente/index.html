@@ -5,28 +5,46 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <style>
-        html, body {
-              height: 100vh;
-        }
-        .fill {
-            min-height: 100vh;
-        }
-    </style>
+    <link rel="stylesheet" href="css.css">
     <title>Eurovisión</title>
   </head>
-  <body class="container-fluid bg-dark" onload="init();">
+  <body class="container-fluid m-0 p-0" onload="init();">
    <div class="alert alert-warning position-absolute col-9 hidde" style="z-index:9999; margin: 20px auto; left: 0; right: 0; display: none" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
         <strong>Error!</strong>Vuelva a intentarlo.
     </div>
-    <div class="container">
-        <div class="row align-items-center fill">
+     <div class="container-fluid fill" id='c1'>
+        <nav class="row mr-5">
+           <div class="col-12 mt-2 mr-2 d-flex justify-content-end">
+               <a href="#encuesta" class="btn btn-primary m-1 border border-danger">Encuesta</a>
+               <a href="#estadistica" class="btn btn-secondary m-1 border border-danger">Estadistica</a>
+           </div>
+        </nav>
+        <header class="row align-items-center">
+            <div class="col-12">
+                <h1 class="text-center"><i>EuroTurism</i></h1>
+                <ul id="autores" class="">
+                  <li class="inicial">E<span>duardo</span></li>
+                  <li class="inicial">I<span>sma</span></li> 
+                  <li class="inicial">R<span>odrigo</span></li>
+                </ul>            
+            </div>
+        </header>
+        <footer class="row align-items-center">
+            <ul>
+                <li>Bootstratp</li>
+                <li>Ajax</li>
+                <li>Openstreetmap</li>
+                <li>Ip-API</li>
+            </ul>
+        </footer>
+    </div>
+    <div class="container-fluid fill" id='c2'>
+        <div class="row align-items-center fill" name="encuesta" id="encuesta">
             <div class="col-12 fill bg-dark">
                  <nav class="row mb-4 mt-2 text-light">
-                     <div class="col-12"><h1><i>EuroTurism</i></h1><h5>Encuesta de turismo europeo</h5></div>
                  </nav>
                  <form name="formulario" class="row">
                    <div class="col-6">
@@ -91,9 +109,10 @@
             </div>
         </div>
     </div>
-    <div class="col-3 fill bg-secondary p-0"><div id='table'></div></div>
-    <div id="mapa" class="col-8 fill m-0 p-0"></div>
-    
+    <div class="container" name="estadistica" id="estadistica">
+        <div class="col-3 fill bg-secondary p-0" ><div id='table'></div></div>
+        <div id="mapa" class="col-8 fill m-0 p-0"></div>
+    </div>
     <!-- Dependencias Javascript
     highmaps, exporting
     <!-- Orden:
