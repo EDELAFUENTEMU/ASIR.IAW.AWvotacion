@@ -27,10 +27,9 @@ function query_paises(){
 
 function query_puntaciones(){
     global $conn, $msg;
-    $sql = 'SELECT paises.acronimo as code, (p10*10+p8*8+p6*6+p4*4+p2*2)/100 as value, comentarios, nom_pais FROM puntuaciones INNER JOIN paises on paises.acronimo = puntuaciones.acronimo';
+    $sql = 'SELECT paises.acronimo as code, (p10*10+p8*8+p6*6+p4*4+p2*2)/100 as value, comentarios, nom_pais FROM puntuaciones INNER JOIN paises on paises.acronimo = puntuaciones.acronimo ORDER BY value DESC';
     $result = $conn->query($sql)->fetchAll(\PDO::FETCH_ASSOC);
     return json_encode($result, JSON_NUMERIC_CHECK);
-
 } //puntuaciones y comentarios por paises
 
 function query_ultUsuario(){

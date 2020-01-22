@@ -1,59 +1,43 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:300,400,700');
-
-@font-face {
-          font-family: Metria;
-          src: url("Metria.ttf");
+body, html { padding: 0; margin: 0; }
+body {
+    min-height: 100vh; 
+    background-image: url(img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 85px;
+}
+ul > li > img{
+    height: 60px; width: 60px;
+}
+#tecnologias{ background-color: #001739d9 !important }
+#tecnologias ul li {
+    display: inline;
+    width: 100px;
+    height: 100px;
+}
+img{
+    width:100%;
+    filter: grayscale(100%);
+}
+#tecnologias ul, #tecnologias li{
+    list-style-type: none;
+    padding: 0px;
 }
 
-#c1{
-/*   background:linear-gradient(45deg, rgba(254,143,6,1) 6%, rgba(255,0,224,1) 99%);*/
-    background-color: #222;
+header{ 
+    background-color:  rgba(0, 0, 0, 0.2);
 }
-.fill {
-        min-height: 100vh;
+header img{
+    filter: none;
+    width: auto;
 }
-h1{
-        font-family: Metria;
-        font-size: 8em;
-        color: #d2a553;
-         animation: title 2s linear infinite;
-}
-h1:before{
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background: #222;
-    border-radius: 100%;
-    transition: all 500ms cubic-bezier(1, 0.885, 0.32, 1);
-    transform: scale(3);
-    left: calc(50% - 250px);
-    top: calc(50% - 250px);
+#foot{ 
+    background-color: black !important; font: small-caption;
 }
 
-#autores{
-    display: flex;
-    justify-content:center;
-    text-align: center
-}
-#autores li {
-  font-family: 'Arial';
-  list-style-type: none;
-  overflow: hidden;
-  font-size: 1em;
-  color: #fff;
-  animation: autores 5s linear forwards;
-  
-  margin: 2px;
+.display-4{
+    font-size: 2.5rem !important;
 }
 
-@keyframes autores {
-  from {width: 0vw; opacity: 0}
-  50%{opacity: 0.75;}
-  to {width: 10vw; opacity: 1}
-}
-@keyframes title{
-    from {text-shadow:4px 2px 18px rgba(255, 255, 255, 0.75); }
-    50%{text-shadow:4px 2px 12px rgba(255, 255, 255, 0.75);}
-    to{text-shadow:4px 2px 18px rgba(255, 255, 255, 0.75);}
-}
